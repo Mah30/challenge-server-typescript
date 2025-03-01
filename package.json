@@ -1,0 +1,45 @@
+{
+  "name": "challenge-server-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mah30/challenge-server-typescript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Mah30/challenge-server-typescript/issues"
+  },
+  "homepage": "https://github.com/Mah30/challenge-server-typescript#readme",
+  "dependencies": {
+    "@prisma/client": "^6.4.1",
+    "bcrypt": "^5.1.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "eslint": "^9.21.0",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cookie-parser": "^1.4.8",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^22.13.8",
+    "nodemon": "^3.1.9",
+    "prisma": "^6.4.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
+}
