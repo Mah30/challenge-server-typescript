@@ -30,11 +30,21 @@ app.use((req, res) => {
 
 
 
+// Função assíncrona para inicialização
 
-
+/* async function main() {
+  try {
+    // Criar um usuário de exemplo
+    const user = await prisma.user.create({
+      data: {
+        username: "admin",
+        password: await bcrypt.hash("admin", 10),
+      },
+  
+    }); */
 
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
 
 
