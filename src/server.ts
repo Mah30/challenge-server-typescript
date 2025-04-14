@@ -3,6 +3,8 @@ import cors from "cors";
 import dotenv from "dotenv";
 import prisma from "./db";
 import bcrypt from "bcrypt";
+/* import authRouter from "";
+import router from ""; */
 
 /* import jwt from "jsonwebtoken"; */
 
@@ -11,20 +13,26 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware
-app.use(express.json());
-app.use(cors());
 
-app.get("/", (req, res) => {
-  res.send("Challenge Generator API is runnig! 🚀");
-});
+// Aqui define a configuração segura do CORS
+const corsOptions = {
+  origin: "process.env.FRONTEND_URL", // botar o netlify aqui
+  credentials: true,
+}
+// Middlewares
+app.use(cors(corsOptions));
+app.use(express.json());
 
 
 //Routes
-//app.use("/auth", authRoutes); //Router ou Routes??
+//app.use("/auth", authRouter); //Router ou Routes??
 //app.use("/api", router);
 app.use((req, res) => {
-    res.status(404).json({ message: "Endpoint not found" });
+  res.status(404).json({ message: "Endpoint not found" });
+});
+
+app.get("/", (req, res) => {
+  res.send("Challenge Generator API is runnig! 🚀");
 });
 
 
