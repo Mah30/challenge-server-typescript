@@ -14,14 +14,16 @@ datasource db {
 }
 
 model User {
-  id        String      @id @default(uuid())
-  username  String      @unique
-  email     String      @unique
-  passwordHash String
-  rankingPoints Int     @default(0)
-  createdAt DateTime    @default(now())
-  updatedAt DateTime    @updatedAt
-  completedChallenges Challenge[]
+  id                    String      @id @default(uuid())
+  firstName             String?              
+  lastName              String?        
+  email                 String      @unique
+  passwordHash          String
+  rankingPoints         Int         @default(0)
+  createdAt             DateTime    @default(now())
+  updatedAt             DateTime    @updatedAt
+  completedChallenges   Challenge[]
+  isAdmin               Boolean     @default(false)
 }
 
 model Challenge  {
